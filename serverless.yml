@@ -1,3 +1,5 @@
+org: ruucm
+app: ses-serverless-api
 # NOTE: update this with your service name
 service: ses-serverless-api-0
 

@@ -22,7 +22,7 @@ const sendEmail = ({ eventData, ...rest }) =>
   new Promise((resolve, reject) => {
     var eParams = {
       Destination: {
-        ToAddresses: [eventData.email]
+        ToAddresses: eventData.emails
         // BccAddresses: [<removed from forum post>]
       },
       Message: {
