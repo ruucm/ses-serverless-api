@@ -1,5 +1,5 @@
 var aws = require("aws-sdk");
-var ses = new aws.SES({ region: "us-ease-1" });
+var ses = new aws.SES({ region: "us-east-1" });
 
 const sendEmail = (event, context, callback) => {
   var qStrings = JSON.parse(event.body);
