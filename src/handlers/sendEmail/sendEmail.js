@@ -49,7 +49,7 @@ const sendEmail = ({ eventData, ...rest }) =>
     var email = ses.sendEmail(eParams, (err, data) => {
       if (err) {
         console.log("err", err);
-        // resolve({ statusCode: 200, ...charge })
+        resolve({ statusCode: 500, ...err });
       } else {
         console.log("===EMAIL SENT===");
         console.log(data);
