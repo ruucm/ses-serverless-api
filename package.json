@@ -1,5 +1,5 @@
 {
-  "name": "serverless-node-starter",
+  "name": "ses-serverless-api",
   "version": "0.1.0",
   "description": "",
   "main": "handler.js",

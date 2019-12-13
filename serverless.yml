@@ -1,5 +1,5 @@
 # NOTE: update this with your service name
-service: serverless-node-starter-0
+service: ses-serverless-api-0
 
 # Use the serverless-webpack plugin to transpile ES6
 plugins:
@@ -18,7 +18,7 @@ provider:
   name: aws
   runtime: nodejs10.x
   stage: ${self:custom.secrets.NODE_ENV}
-  region: us-west-2
+  region: us-ease-1
   environment:
     NODE_ENV: ${self:custom.secrets.NODE_ENV}
     EMAIL: ${self:custom.secrets.EMAIL}
