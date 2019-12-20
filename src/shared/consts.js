@@ -1,1 +1,1 @@
-export const emailFrom = "notify@harbor.school";
+export const emailFromDefault = "notify@harbor.school";

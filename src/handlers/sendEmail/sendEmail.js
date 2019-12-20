@@ -1,6 +1,6 @@
 var aws = require("aws-sdk");
 var ses = new aws.SES({ region: "us-east-1" });
-import { emailFrom } from "../../shared/consts";
+import { emailFromDefault } from "../../shared/consts";
 
 const handler = async (event, context, callback) => {
   const result = await sendEmail({
@@ -41,8 +41,8 @@ const sendEmail = ({ eventData, ...rest }) =>
           Data: eventData.subject || "Default subject"
         }
       },
-      Source: emailFrom,
-      ReturnPath: emailFrom
+      Source: eventData.emailFrom ? eventData.emailFrom : emailFromDefault,
+      ReturnPath: eventData.emailFrom ? eventData.emailFrom : emailFromDefault
     };
 
     console.log("===SENDING EMAIL===");
